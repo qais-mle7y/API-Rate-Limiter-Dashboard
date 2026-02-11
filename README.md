@@ -74,7 +74,7 @@ automatically via SSE.
 │   │   ├── components/           # Dashboard, Charts, Table, Tester
 │   │   ├── hooks/useMetricsSSE.js
 │   │   └── services/api.js
-│   └── netlify.toml
+│   └── services/api.js
 └── README.md
 ```
 
@@ -107,17 +107,6 @@ Every response from `/api/*` includes:
 | `X-RateLimit-Remaining` | Requests remaining in the current window |
 | `X-RateLimit-Tier` | The user's tier (`free` / `premium`) |
 | `Retry-After` | Seconds to wait (only on 429 responses) |
-
----
-
-## Deployment
-
-| Component | Target | Notes |
-|-----------|--------|-------|
-| Frontend | Netlify | `netlify.toml` included; set `REACT_APP_API_URL` env var |
-| Backend | Local | Run `npm run dev` on your machine |
-
-For a demo video, start both servers locally and record the dashboard in action.
 
 ---
 
